@@ -1,0 +1,144 @@
+@import url('http://fonts.googleapis.com/css?family');
+
+body
+{
+    font-family: 'roboto', sans-serif;
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar
+{
+    position: fixed;
+    left: -250px;;
+    width: 250px;
+    height: 100%;
+    background: rgb(237, 12, 16);
+    transition: all .5s ease;
+   
+    z-index: 2; /* Set the z-index for the content, a higher value than the container */
+}
+.sidebar header
+{
+    font-size: 22px;
+    color: white ;
+    text-align: center;
+    line-height: 70px;
+    background: rgb(237, 60, 62);
+    user-select: none;
+    
+    border: black;
+}
+
+.sidebar ul a
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 16px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(255, 255, 255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+    z-index: 2; /* Set the z-index for the content, a higher value than the container */
+}
+
+.sidebar ul a:hover
+
+{
+    padding-left: 50px;
+    background: rgb(237, 60, 62);
+    color: white;
+    
+}
+
+.sidebar ul a i
+{
+    margin-right: 16px;
+}
+
+#check
+{
+    display: none;
+
+}
+label #btn,label #cancel
+{
+    position: absolute;
+    cursor: pointer;
+    background-color: pink;
+    border-radius: 3px;
+    z-index: 1; /* Set the z-index for the content, a higher value than the container */
+   
+}
+
+label #btn
+{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+    
+}
+label #cancel
+{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all .5s ease;
+    
+}
+#check:checked ~ .sidebar
+{
+    left: 0;
+
+}
+#check:checked ~ label #cancel
+{
+    left: 195px;
+}
+
+.container_logout{
+    position: relative;
+    width: 100%;
+    height: 70px; /* Set height for the container */
+    border: 1px solid black;
+    z-index: 0; /* Set the z-index for the container */
+    background-color: rgb(237, 60, 62);
+    
+}
+
+.logout ul a
+{
+position: absolute;
+  top: 10px; /* Adjust the distance from the top */
+  right: 10px; /* Adjust the distance from the right */
+  background-color: #f4a040;
+  border-radius: 10px;
+  height: 20px;
+    color:wheat;
+    width: 80px;
+    font-weight: bold;
+    
+   
+    
+}
+.logout ul a:hover{
+
+    background: black
+}
